@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page 4</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Itim&family=Poppins:wght@400;500&display=swap");
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: 0;
+        overflow: hidden;
+      }
+      .sec-1 {
+        background-image: url("curved-arrow.png");
+        background-repeat: no-repeat;
+        background-size: 25%;
+        background-position: 15% 20%;
+        /* left top
+               center center
+               right bottom */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70vh;
+      }
+      .container {
+        background-color: #fcf5ed;
+        height: 70%;
+        width: 40%;
+        border-radius: 10px;
+      }
+      .container .box1 {
+        display: flex;
+        justify-content: center;
+        border-radius: 10px;
+        background-color: #f6f6f7;
+        height: 50%;
+      }
+      .box2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        background-color: #1b1b20;
+        height: 30%;
+        width: 20%;
+        border-radius: 10px;
+      }
+      .box2 h2 {
+        color: white;
+        font-family: itim;
+      }
+      .btn {
+        position: absolute;
+        margin-top: 25%;
+        height: 10%;
+        width: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      button {
+        background-color: #ffc436;
+        color: #1b1b20;
+        height: 50px;
+        width: 90px;
+        border-radius: 10px;
+        border: none;
+        font-family: itim;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+      .container1 {
+        display: flex;
+        align-items: center;
+        height: 17vh;
+        justify-content: space-between;
+        padding: 10px 5vw 0px 5vw;
+        /*top right bottom left*/
+        cursor: pointer;
+    }
+    
+    .container1 img {
+      height: 30px;
+  }
+
+  #absolute {
+      height: 17vh;
+      top: 1%;
+      left: 45%;
+  }
+
+   
+
+    </style>
+  </head>
+  <body>
+    <div class="section1">
+      <div class="container1">
+        <img src="speaker.png" onclick="playSound()" />
+        <audio id="audio" src="backgroundmusic.mp3"></audio>
+        <img src="logo.png" alt="logo" id="absolute" />
+        <img src="information.png" alt="Information" />
+      </div>
+    </div>
+
+    <div class="sec-1">
+      <div class="container">
+        <div class="box1"></div>
+      </div>
+      <div class="box2">
+        <h2>Thank you for Playing!</h2>
+      </div>
+      <div class="btn">
+        <a href="index.html"><button>Play Again!</button></a>
+      </div>
+    </div>
+    <script src="js/music.js"></script>
+  </body>
+</html>

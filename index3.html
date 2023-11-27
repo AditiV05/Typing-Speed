@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 3</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Itim&family=Poppins:wght@400;500&display=swap");
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .sec-2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 4%;
+        }
+
+        .wrapper {
+            width: 600px;
+            background: #1B1B20;
+            padding: 20px;
+            border-radius: 20px;
+        }
+        .wrapper .input-field{ /* Hidding the input box */
+            z-index: -999; /* defines the order of overlapping elements and works only with position:absolute , position:relative , or position:fixed */
+            opacity: 0;
+            position: absolute;
+        }
+        .wrapper .content-box {
+            padding: 10px 20px 0px;
+            border-radius: 10px;
+            background-color: white;
+        }
+
+        .content-box .typing-text {
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .typing-text p {
+            font-size: 20px;
+            text-align: justify;
+            letter-spacing: 1px;
+        }
+
+        .typing-text p span{
+            position: relative;
+        }
+        .typing-text p span.correct{
+            color: #A2C579;
+        }
+
+        .typing-text p span.incorrect{
+            color: #C51605;
+            background: #ffc0cb;
+            border: 1px solid white;
+            border-radius: 4px;
+        }
+
+        .typing-text p span.active{
+            color: #89B9AD;
+        }
+
+        .typing-text p span.active::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 2px;
+            width: 100%;
+            opacity: 1;
+            background: #89B9AD;
+        }     
+
+        .content-box .content {
+            display: flex;
+            margin-top: 20px;
+            border-top: 1px solid grey;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .content .result-details {
+            display: flex;
+            width: 40rem;
+            margin-right: 3rem;
+            justify-content: space-between;
+        }
+
+        .result-details li {
+            display: flex;
+            align-items: center;
+            list-style: none;
+        }
+
+        .result-details li span {
+            display: block;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            height: 17vh;
+            justify-content: space-between;
+            padding: 10px 5vw 0px 5vw;
+            /*top right bottom left*/
+            cursor: pointer;
+        }
+
+        .container img {
+            height: 30px;
+        }
+
+        #absolute {
+            height: 17vh;
+            top: 1%;
+            left: 45%;
+        }
+        .btn1{
+            height: 20%;
+            width: 20%;
+            background-color: #1B1B20;
+            color: white;
+            border-radius: 15px;
+            cursor: pointer;
+            font-family: itim;
+        }
+        .btn2{
+            position: absolute;
+            margin-top: 17%;
+            margin-left: 20%;
+            width: 5%;
+            height: 5%;
+            border-radius: 10px;
+            background-color: #FFC436;
+            cursor: pointer;
+            border: none;
+            font-family: itim;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section1">
+        <div class="container">
+            <img src="speaker.png" onclick="playSound()"/>
+            <audio id="audio" src="backgroundmusic.mp3"></audio>
+            <img src="logo.png" alt="logo" id="absolute" />
+            <a href="index2.html"><img src="information.png" alt="Information" /></a>
+        </div>
+    </div>
+
+    <div class="sec-2">
+        <div class="wrapper">
+            <input type="text" class="input-field">
+            <div class="content-box">
+                <div class="typing-text">
+                    <p></p>
+                </div>
+                <div class="content">
+                    <ul class="result-details">
+                        <li class="time">
+                            <p>Time Left:</p>
+                            <span><b>45</b>s</span>
+                        </li>
+                        <li class="Errors">
+                            <p>Errors:</p>
+                            <span>0</span>
+                        </li>
+                        <li class="WPM">
+                            <p>WPM:</p>
+                            <span>0</span>
+                        </li>
+                        <li class="CPM">
+                            <p>CPM:</p>
+                            <span>0</span>
+                        </li>
+                    </ul>
+                    <button class="btn1">Try Again</button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <a href="index4.html"><button class="btn2"> Done </button></a>
+        </div>
+
+        <script src="js/paragraph.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/music.js"></script>
+</body>
+
+</html>
